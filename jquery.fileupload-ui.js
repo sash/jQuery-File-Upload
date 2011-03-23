@@ -123,9 +123,9 @@
                     value: value
                 });
             } else {
-                var progressbar = $('<progress value="' + value + '" max="100"/>').appendTo(node);
+                var progressbar = $('<progress value="' + value + '" max="100"></progressbar>').appendTo(node);
                 progressbar.progressbar = function (key, value) {
-                    progressbar.attr('value', value);
+                    progressbar.attr('value', value).html(value+"%");
                 };
                 return progressbar;
             }
